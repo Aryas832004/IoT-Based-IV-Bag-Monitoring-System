@@ -1,115 +1,129 @@
-# 💧 IoT-based IV Bag Monitoring System
+# 💧 IoT-Based IV Bag Monitoring System
 
-## 📌 Project Overview
-
-This project presents an **IoT-based Intravenous (IV) Bag Monitoring System** to continuously monitor IV fluid levels. The system uses a load cell to measure the weight of the IV bag and transmits real-time data through Wi-Fi using the ESP8266. Alerts are sent to a mobile app when the fluid level is critically low, improving patient care and reducing manual workload for nurses.
-
-> 🔍 This project was presented online at the **International Conference on Advancement in Science, Engineering & Technology (ICASET)** and is expected to be uploaded officially soon.
+An innovative IoT solution designed to enhance patient safety and reduce the manual workload of medical staff by continuously monitoring IV fluid levels and sending real-time alerts.
 
 ---
 
-## 👨‍🔬 Team Members
+## 📚 Project Overview
 
-- Arya Sasikumar *(Team Lead)*
-- Gowthami S
-- Mahitha M
-- Ajmal TA
+Intravenous (IV) therapy plays a crucial role in clinical care. However, manual monitoring of IV fluid levels is time-consuming and prone to human error. This project presents an **IoT-based IV Bag Monitoring System** using the **ESP8266 microcontroller**, **load cell**, and **Blynk platform** to automate IV fluid monitoring. Alerts are sent to a mobile app when fluid levels drop below a critical threshold.
 
----
-
-## 🛠️ Features
-
-- Real-time IV fluid level monitoring using a load cell
-- Automatic alert through Blynk IoT platform
-- LCD display for live data feedback
-- LED indicator for low fluid level
-- Wireless communication via ESP8266
+This project was presented at the **International Conference on Advancement in Science, Engineering & Technology (ICASET)** and is expected to be published officially soon.
 
 ---
 
-## 🔧 Components Used
+## 🧑‍🏫 Supervised By
 
-| Component                | Description                          |
-|--------------------------|--------------------------------------|
-| ESP8266 Wi-Fi Module     | For internet connectivity            |
-| HX711 Amplifier          | Interface for the load cell          |
-| Load Cell                | Measures IV bag weight               |
-| 16x2 LCD with I2C        | Displays the weight                  |
-| LED                      | Alert indicator                      |
-| Breadboard & Power Supply| Circuit setup                        |
+**Ms. Swetha C**  
+Assistant Professor  
+Department of Electronics and Communication Engineering  
+Ahalia School of Engineering and Technology
 
 ---
 
-## 📷 Block Diagram
+## 👥 Team Members
 
-![Block Diagram](diagrams/block_diagram.png)
-
----
-
-## 🔌 Circuit Diagram
-
-![Circuit Diagram](diagrams/circuit_diagram.jpg)
+- Arya Sasikumar 
+- Gowthami S  
+- Mahitha M  
+- Ajmal T A
 
 ---
 
-## 🔁 Flowchart
+## ⚙️ Key Features
 
-![Flowchart](diagrams/flowchart.png)
-
----
-
-## ⚙️ Real Setup
-
-![Real Setup](outputs/setup_view.jpg)
+- 📦 **Real-time Monitoring** – Load cell detects IV fluid weight continuously.
+- 📲 **IoT Alerts** – Sends notifications via Blynk when fluid is low.
+- 🖥 **LCD Display** – Shows current IV bag weight.
+- 🔴 **LED Indicator** – Visual cue for nearby staff.
+- 🌐 **Remote Access** – Enables off-site monitoring through Wi-Fi.
 
 ---
 
-## 📊 Output Dashboard
+## 🔧 Hardware & Software
 
-![Output Dashboard](outputs/output_dashboard.jpg)
-
----
-
-## 🚀 Working Process
-
-1. Load cell continuously measures the IV bag weight.
-2. ESP8266 processes and sends data to the Blynk app.
-3. If weight drops below threshold:
-   - An alert is pushed to the mobile app.
-   - A red LED is turned ON.
-   - LCD displays the current weight.
+| Component             | Description                           |
+|----------------------|---------------------------------------|
+| ESP8266 NodeMCU      | Microcontroller with Wi-Fi            |
+| Load Cell (10kg)     | Senses IV fluid weight                |
+| HX711 Amplifier      | Amplifies and digitizes sensor data   |
+| 16x2 LCD with I2C    | Displays IV weight locally            |
+| LED                  | Indicates low fluid alert             |
+| Power Supply (5V)    | External DC adapter or battery        |
+| Arduino IDE          | Code development                      |
+| Blynk App            | Remote monitoring via smartphone      |
 
 ---
 
-## 🗃️ Folder Structure
+## 🧠 Working Principle
 
-```
-📦 IoT-IV-Bag-Monitoring
- ┣ 📂 code
- ┃ ┗ 📄 main.ino
- ┣ 📂 diagrams
- ┃ ┣ 📄 block_diagram.png
- ┃ ┣ 📄 circuit_diagram.jpg
- ┃ ┗ 📄 flowchart.png
- ┣ 📂 outputs
- ┃ ┣ 📄 output_dashboard.jpg
- ┃ ┗ 📄 setup_view.jpg
- ┗ 📄 README.md
-```
+1. **Initialization**: ESP8266 powers up and calibrates the load cell via HX711.  
+2. **Weight Monitoring**: Real-time weight data is acquired and processed.  
+3. **Display Output**: Weight is shown on the 16x2 LCD using I2C.  
+4. **Threshold Detection**: If fluid drops below set limit:
+   - Red LED turns ON.
+   - Notification is sent via Blynk app.
+5. **Reset Condition**: Once IV bag is refilled, the system resets automatically.
 
 ---
 
-## 🔮 Future Scope
+## 🖼️ Recommended GitHub Folder Structure
 
-- Integrate more sensors (heart rate, temperature).
-- Add SMS or email alerts.
-- Store historical data in cloud dashboard.
-- Implement battery-powered portable version.
 
 ---
 
-## 📬 Contact
+## 📷 Output Snapshot
 
-📧 Email: aryasasi123@gmail.com  
-🌐 GitHub: [YourGitHubUsername](https://github.com/YourGitHubUsername)
+Upload the following to the `/output` folder:
+- Setup photo
+- Serial monitor screenshot
+- Blynk app alert view
+
+---
+
+## 🔮 Future Enhancements
+
+The current system delivers accurate and reliable monitoring of IV fluid levels, but there are several compelling directions for future development. These enhancements aim to bring the system closer to real-world deployment in advanced healthcare environments:
+
+- 🏥 **Integration with Hospital Management Systems (HMS/EMR/ERP)**  
+  Seamlessly link IV data with hospital ERP platforms for automated record-keeping, real-time alerts to nurses, and centralized patient dashboards.
+
+- 📊 **Real-Time Patient Health Dashboard**  
+  A responsive web or mobile dashboard for doctors and caregivers to view live IV stats of multiple patients at once with alert history and health indicators.
+
+- ☁️ **Cloud-Based Logging and Historical Analytics**  
+  Automatically back up data to the cloud with support for analyzing trends, patient-specific usage patterns, refill cycles, and predictive maintenance.
+
+- 📲 **Smart Notifications & Multi-Channel Alerts**  
+  Add support for SMS, email, WhatsApp, push notifications, and even wearable smart devices (like smartwatches) for faster, targeted alert delivery.
+
+- 🤖 **AI-Driven Predictive Monitoring**  
+  Use artificial intelligence to predict when an IV bag will be depleted based on current flow rates, usage patterns, and historical data. Prevents downtime and improves planning.
+
+- 🔋 **Portable Power with Wireless Charging**  
+  Incorporate a rechargeable lithium battery with wireless charging support to make the device suitable for mobile carts or ambulance use.
+
+- 🧪 **IV Fluid Quality & Safety Detection**  
+  Add advanced sensors for detecting fluid properties such as pH, contamination, or expiry — ensuring patient safety beyond just level monitoring.
+
+- 🔁 **Automated IV Flow Control System**  
+  Combine the monitor with a servo valve or smart drip controller to automatically adjust or stop fluid delivery based on sensor feedback.
+
+- 🧬 **Smart Multi-Patient Monitoring Hub**  
+  Connect multiple IV systems to a centralized unit that monitors all patient IVs in a ward, reducing the need for individual device checks.
+
+- 📡 **Geo-Fencing for Asset and Patient Safety**  
+  Track the device location and usage via GPS or Wi-Fi positioning, helpful for hospitals with multiple departments or remote setups.
+
+- 🗣️ **Voice Assistant Integration (Alexa/Google)**  
+  Enable interaction via voice — “What’s the status of bed 4’s IV?”, making it easier for healthcare workers during rounds.
+
+- 🧑‍💻 **Open API for Healthcare Developers**  
+  Offer REST or MQTT-based APIs so hospitals can customize or integrate the system with other smart medical devices.
+
+---
+
+## 📄 License
+
+This project is developed for academic and research purposes under the guidance of Ahalia School of Engineering and Technology. You are free to use or extend the project with proper attribution.
 
